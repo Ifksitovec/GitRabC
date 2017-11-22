@@ -28,7 +28,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	case 2:
 		{
-			cout << "function in development" << endl;
+			cout << "Result = " << subtraction(first_numb,second_numb) << endl;
 			break;
 		}
 	case 3:
