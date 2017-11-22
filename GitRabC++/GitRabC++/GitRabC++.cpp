@@ -2,6 +2,7 @@
 //
 
 #include "stdafx.h"
+#include "funcs.h"
 #include <iostream>
 using namespace std;
 
@@ -22,7 +23,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	{
 	case 1:
 		{
-			cout << "function in development" << endl;
+			cout << "Result = " << addition(first_numb,second_numb) << endl;
 			break;
 		}
 	case 2:
