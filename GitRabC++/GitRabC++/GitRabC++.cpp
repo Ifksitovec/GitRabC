@@ -10,7 +10,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	double first_numb,second_numb;
 	int n;
-
+	cout << "This work was carried out by Sosnovsky and Turtsevich" << endl; 
 	cout << "Enter first number" << endl; 
 	cin >> first_numb;
 	cout << "Enter second number" << endl; 
