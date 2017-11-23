@@ -3,40 +3,40 @@
 
 #include "stdafx.h"
 #include "funcs.h"
+#include "funcsSerg.h"
 #include <iostream>
 using namespace std;
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	double first_numb,second_numb;
-	int n;
-	cout << "This work was carried out by Sosnovsky and Turtsevich" << endl; 
-	cout << "Enter first number" << endl; 
-	cin >> first_numb;
-	cout << "Enter second number" << endl; 
-	cin >> second_numb;
-	cout << "Select an action:" << endl; 
-	cout << "1-Addition, 2-Subtraction, 3-Multiplication, 4-Division" << endl;
-	cin >> n;
+	double first_numb, second_numb;
+	char oper;
 
-	switch (n)
+	cout << "Enter first number: "; 
+	cin >> first_numb;
+	cout << "Enter second number: "; 
+	cin >> second_numb;
+	cout << "Select an operation (+, -, *, /): "; 
+	cin >> oper;
+
+	switch (oper)
 	{
-	case 1:
+	case '+':
 		{
-			cout << "Result = " << addition(first_numb,second_numb) << endl;
+			cout << first_numb << " " << oper << " " << second_numb << " = " << addition(first_numb,second_numb) << endl;
 			break;
 		}
-	case 2:
+	case '-':
 		{
-			cout << "Result = " << subtraction(first_numb,second_numb) << endl;
+			cout << first_numb << " " << oper << " " << second_numb << " = " << subtraction(first_numb,second_numb) << endl;
 			break;
 		}
-	case 3:
+	case '*':
 		{
-			cout << "function in development" << endl;
+			cout << first_numb << " " << oper << " " << second_numb << " = " << multiplication(first_numb,second_numb) << endl;
 			break;
 		}
-	case 4:
+	case '/':
 		{
 			cout << "function in development" << endl;
 			break;
