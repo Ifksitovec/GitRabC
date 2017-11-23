@@ -38,7 +38,13 @@ int _tmain(int argc, _TCHAR* argv[])
 		}
 	case '/':
 		{
-			cout << "function in development" << endl;
+			if (second_numb == 0)
+			{
+				cout << "ERROR!!!" << endl;
+				cout << "Division by 0" << endl;
+			}
+			else
+				cout << first_numb << " " << oper << " " << second_numb << " = " << division(first_numb,second_numb) << endl;
 			break;
 		}
 	default:
