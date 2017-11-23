@@ -10,48 +10,60 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	double first_numb, second_numb;
-	char oper;
+	char oper, check = 'y';
 
-	cout << "Enter first number: "; 
-	cin >> first_numb;
-	cout << "Enter second number: "; 
-	cin >> second_numb;
-	cout << "Select an operation (+, -, *, /): "; 
-	cin >> oper;
+	cout << "This work by Sosnovskiy and Turtsevich" << endl;
+	cout << endl;
 
-	switch (oper)
+	do
 	{
-	case '+':
+		cout << "Enter first number: "; 
+		cin >> first_numb;
+		cout << "Select an operation (+, -, *, /): "; 
+		cin >> oper;
+		cout << "Enter second number: "; 
+		cin >> second_numb;
+
+		switch (oper)
 		{
-			cout << first_numb << " " << oper << " " << second_numb << " = " << addition(first_numb,second_numb) << endl;
-			break;
-		}
-	case '-':
-		{
-			cout << first_numb << " " << oper << " " << second_numb << " = " << subtraction(first_numb,second_numb) << endl;
-			break;
-		}
-	case '*':
-		{
-			cout << first_numb << " " << oper << " " << second_numb << " = " << multiplication(first_numb,second_numb) << endl;
-			break;
-		}
-	case '/':
-		{
-			if (second_numb == 0)
+		case '+':
+			{
+				cout << first_numb << " " << oper << " " << second_numb << " = " << addition(first_numb,second_numb) << endl;
+				break;
+			}
+		case '-':
+			{
+				cout << first_numb << " " << oper << " " << second_numb << " = " << subtraction(first_numb,second_numb) << endl;
+				break;
+			}
+		case '*':
+			{
+				cout << first_numb << " " << oper << " " << second_numb << " = " << multiplication(first_numb,second_numb) << endl;
+				break;
+			}
+		case '/':
+			{
+				if (second_numb == 0)
+				{
+					cout << "ERROR!!!" << endl;
+					cout << "Division by 0" << endl;
+				}
+				else
+					cout << first_numb << " " << oper << " " << second_numb << " = " << division(first_numb,second_numb) << endl;
+				break;
+			}
+		default:
 			{
 				cout << "ERROR!!!" << endl;
-				cout << "Division by 0" << endl;
+				cout << "This operation does not exist" << endl;
 			}
-			else
-				cout << first_numb << " " << oper << " " << second_numb << " = " << division(first_numb,second_numb) << endl;
-			break;
 		}
-	default:
-		{
-			cout << "This operation does not exist" << endl;
-		}
-	}
+		cout << endl;
+		cout << "Do you want continue? (y/n): ";
+		cin >> check;
+		cout << endl;
+
+	} while (check != 'n');
 	system("pause");
 	return 0;
 }
